@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practicum", "Practicum\Practicum.csproj", "{605FD17E-F7DB-4BE3-A3F3-EE63A5C7B300}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticumUI", "PracticumUI\PracticumUI.csproj", "{28B889C8-19EB-4A96-BC21-3A06756F3217}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticumNoMvvm", "PracticumNoMvvm\PracticumNoMvvm.csproj", "{A64FB9AD-D51F-4869-AF87-DB7084704A3B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{605FD17E-F7DB-4BE3-A3F3-EE63A5C7B300}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{605FD17E-F7DB-4BE3-A3F3-EE63A5C7B300}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{605FD17E-F7DB-4BE3-A3F3-EE63A5C7B300}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28B889C8-19EB-4A96-BC21-3A06756F3217}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28B889C8-19EB-4A96-BC21-3A06756F3217}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28B889C8-19EB-4A96-BC21-3A06756F3217}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28B889C8-19EB-4A96-BC21-3A06756F3217}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A64FB9AD-D51F-4869-AF87-DB7084704A3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A64FB9AD-D51F-4869-AF87-DB7084704A3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A64FB9AD-D51F-4869-AF87-DB7084704A3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A64FB9AD-D51F-4869-AF87-DB7084704A3B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

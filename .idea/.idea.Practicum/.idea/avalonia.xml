@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="PracticumNoMvvm/MainWindow.axaml" value="PracticumNoMvvm/PracticumNoMvvm.csproj" />
+        <entry key="PracticumUI/App.axaml" value="PracticumUI/PracticumUI.csproj" />
+        <entry key="PracticumUI/Controls/Matrix.axaml" value="PracticumUI/PracticumUI.csproj" />
+        <entry key="PracticumUI/Views/ButtonsView.axaml" value="PracticumUI/PracticumUI.csproj" />
+        <entry key="PracticumUI/Views/MAtrixView.axaml" value="PracticumUI/PracticumUI.csproj" />
+        <entry key="PracticumUI/Views/MainWindow.axaml" value="PracticumUI/PracticumUI.csproj" />
+        <entry key="PracticumUI/Views/MatrixView.axaml" value="PracticumUI/PracticumUI.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

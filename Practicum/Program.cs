@@ -1,84 +1,35 @@
-﻿Console.WriteLine("Task 4");
-Test(Task4([1, 2, 3]), 3);
-Test(Task4([-1, 2, 3]), 2);
-Test(Task4([0, -2, 3]), 1);
-Test(Task4([1, 0, 3]), 2);
-Console.WriteLine("Task 1");
-Test(Task1([1, 2, 3, 1, 1, 1]), 3);
-Test(Task1([1, 2, 3]), 1);
-Test(Task1([1, 2, 2, 3, 1, 1]), 2);
-Console.WriteLine("Task 2");
-Test(Task2(13), 13);
-Test(Task2(10), 2);
-Test(Task2(15), 3);
-Console.WriteLine("Task 6");
-Test(Task6(111), true);
-Test(Task6(121), false);
-
+﻿TestTask20();
 return;
 
-void Test(dynamic value, dynamic result)
+IEnumerable<int> Task20(int[] arr)
 {
-    if (value == result)
+    for (var i = 1; i < arr.Length - 1; i++)
     {
-        Console.WriteLine(value + " OK");
-    }
-    else
-    {
-        Console.WriteLine(value + " FAIL");
+        if (arr[i - 1] + arr[i + 1] == arr[i])
+        {
+            yield return arr[i];
+        }
     }
 }
 
-
-int Task4(int[] arr) => arr.Count(x => x > 0);
-
-bool Task6(int n)
+void TestTask20()
 {
-    var lastNum = n % 10;
-    n /= 10;
-    while (n > 0)
+    var passed = 0;
+    var total = 1;
+    if (Task20([1, 2, 1, 4, 3, 5]).SequenceEqual([2, 4]))
     {
-        var currNum = n % 10;
-        if (lastNum != currNum)
-        {
-            return false;
-        }
-
-        lastNum = currNum;
-        n /= 10;
+        passed++;
+        Console.Write(". ");
     }
+    else Console.Write("x ");
 
-    return true;
-}
-
-int Task2(int n)
-{
-    for (var i = 2; i < Math.Sqrt(n) + 1; i++)
+    total++;
+    if (Task20([1, 2, 3, 4, 5]).SequenceEqual([]))
     {
-        if (n % i == 0)
-        {
-            return i;
-        }
+        passed++;
+        Console.Write(". ");
     }
+    else Console.Write("x ");
 
-    return n;
-}
-
-int Task1(int[] arr)
-{
-    var max = 0;
-    var count = 1;
-    for (var i = 0; i < arr.Length - 1; i++)
-    {
-        if (arr[i] == arr[i + 1])
-        {
-            count++;
-        }
-        else
-        {
-            max = Math.Max(max, count);
-            count = 1;
-        }
-    }
-    return Math.Max(max, count);
+    Console.WriteLine($"\nPassed {passed}/{total}");
 }

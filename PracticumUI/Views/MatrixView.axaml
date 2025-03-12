@@ -1,0 +1,31 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:PracticumUI.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="PracticumUI.Views.MatrixView"
+             x:DataType="viewModels:MatrixViewModel">
+    <StackPanel Spacing="40" VerticalAlignment="Center">
+        <StackPanel Orientation="Horizontal" Spacing="5" HorizontalAlignment="Center">
+            <TextBox Text="{Binding Rows}"/>
+            <Label>x</Label>
+            <TextBox Text="{Binding Columns}" />
+        </StackPanel>
+        <ItemsControl ItemsSource="{Binding MatrixItems}"
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Center">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <TextBox Text="{Binding}"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Rows="{Binding Rows}" Columns="{Binding Columns}" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+        </ItemsControl>
+    </StackPanel>
+</UserControl>
